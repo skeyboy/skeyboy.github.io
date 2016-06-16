@@ -1,23 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1404.47">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 28.0px; font: 17.0px Times; color: #eeeb82; -webkit-text-stroke: #eeeb82}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;h1&gt;Hello World&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1">&lt;p&gt;I'm hosted with GitHub Pages.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
-</html>
+        最近一直在忙，年底了竟然还压过来两个项目。一个字：忙。两个子忒忙。除了做项目，还有需要做技术调研公司准备做跨平台的移动端App，由于之前FB的react native没有开源Android的项目，只能采用cordova。可是自己独自搞了2，3个月差不多，各种虐啊。项目压力外加，自己对html和JS的本能抗拒，虽然最终拿下了cordov的技术的公关，可是依然还是念念不忘能够秒杀cordov的react native。当听闻FB开源之后就毅然放弃了cordova（不要说我见异思迁）投入了react native的怀抱。
+        说了这么多废话就说一下最近的一个问题：项目要集成一个硬件，通过音频口读取里面加密的员工编号和所属部门信息，以达到对人员的认证。但是有一个问题，这个读取过程很慢，因此为了体验，应该先检测是否音频口占用（当然插的不一定就是认证的设备）然后在时读取流程：
+        OC版本
++(BOOL)isHeadsetPluggedIn {
+    AVAudioSessionRouteDescription* route = [[AVAudioSession sharedInstance] currentRoute];
+    NSLog(@"%@",[route outputs]);
+    for (AVAudioSessionPortDescription* desc in [route outputs]) {
+        NSLog(@"\n %@ %@",desc.portName, desc.portType);
+        if ([[desc portType] isEqualToString:AVAudioSessionPortHeadphones]){
+            return YES;
+        }else{
+            continue;
+        }
+    }
+    return NO;
+}
+swift:
+extension NSObject{
+    public class func isHeadsetPluggedIn() ->Bool{
+      let route : AVAudioSessionRouteDescription = AVAudioSession.sharedInstance().currentRoute;
+        for desc:AVAudioSessionPortDescription in route.outputs  {
+            if desc.portType == AVAudioSessionPortHeadphones{
+                return true
+            } else{
+            continue
+            }
+        }
+        return false
+    }
+}
