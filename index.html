@@ -158,10 +158,9 @@ sup {
 <body>
 <h2>幸福的李雨龙</h2>
 
-<blockquote><p>邮箱: <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x6c;&#x79;&#x6c;&#97;&#x70;&#x70;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#109;">&#108;&#121;&#x6c;&#x61;&#x70;&#112;&#x40;&#49;&#54;&#x33;&#46;&#x63;&#111;&#109;</a></p>
+<h4><a href="http://blog.sina.com.cn/s/articlelist_3962633044_0_1.html">新浪博客</a></h4>
 
-<p>QQ: 994158307   <br/>
-<br /></p></blockquote>
+<p>邮箱: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#108;&#121;&#x6c;&#97;&#x70;&#112;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#x79;&#x6c;&#x61;&#x70;&#112;&#64;&#49;&#54;&#51;&#x2e;&#99;&#111;&#109;</a>  QQ: 994158307</p>
 
 <h1><img src="icon.jpg" alt="Smaller icon" /></h1>
 
@@ -197,6 +196,52 @@ sup {
 
 <!--iOS中对应的连接地址-->
 
+
+<h4>2016年7月6日下午3:26</h4>
+
+<h3>swift使用runtime</h3>
+
+<ul>
+<li><p>判断class是否遵循每个protocol</p>
+
+<ul>
+<li><p>instance.respondsToSelector(#selector(ModelClass.plistKeyMap))</p>
+
+<pre><code>  protocol Model {
+       func plistKeyMap() -&gt; Dictionary&lt;String,AnyObject&gt;
+  }
+</code></pre></li>
+</ul>
+</li>
+<li>获取属性</li>
+</ul>
+
+
+<pre><code> var count:UInt32 = 0
+
+        let propertyList = class_copyIvarList(self.classForCoder, &amp;count)
+
+        for index in 0 ... count-1 {
+
+            let item = propertyList[ Int(index)]
+            //获取变量名称
+            let proper_name = property_getName(item)
+            let properName = String.fromCString(proper_name)!
+            print("\(proper_name)   \(properName)")
+
+
+            //获取属性
+            let proper_attri = property_getAttributes(item)
+            let properAttri = String.fromCString(proper_attri)!
+            print( "变量属性：" + properAttri )
+            //获取属性value
+            let proper_attri_value = property_copyAttributeValue(item, proper_attri)
+            let properAttriValue:String? = String.fromCString(proper_attri_value)
+            print( "变量属性值：\(properAttriValue)" )
+            }  
+
+            free(propertyList)//记得释放内存
+</code></pre>
 
 <h4>2016年7月1日下午3:41</h4>
 
