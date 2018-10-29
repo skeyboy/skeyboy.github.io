@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.ElbF/1622459d9cd78929c9c5b6736cc315e5a9488341/f55608b642da1108c050e79a2d4c58f9e727e567.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.ElbF/1622459d9cd78929c9c5b6736cc315e5a9488341/AppIcon83.5x83.5@2x~ipad.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.ElbF/1622459d9cd78929c9c5b6736cc315e5a9488341/AppIcon83.5x83.5@2x~ipad.png</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.gener-tech.ElbF</string>
+				<key>bundle-version</key>
+				<string>1</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>ELB (F)</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
