@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.szahm/c695cafa53ba870ed9088a683d935464b6e3f715/c7cd51860d85586e0f149d4eda4aba2e49d7269d.ipa</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>display-image</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.szahm/c695cafa53ba870ed9088a683d935464b6e3f715/59cb62d8f2a90a0be0b55d5111b7ed6af180f47f.png</string>
+				</dict>
+				<dict>
+					<key>kind</key>
+					<string>full-size-image</string>
+					<key>url</key>
+					<string>https://skeyboy.github.io/ipa/7edef5f2f04b897095acfa410ded947356c35b54/com.gener-tech.szahm/c695cafa53ba870ed9088a683d935464b6e3f715/59cb62d8f2a90a0be0b55d5111b7ed6af180f47f.png</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.gener-tech.szahm</string>
+				<key>bundle-version</key>
+				<string>101</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>AMAS</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
